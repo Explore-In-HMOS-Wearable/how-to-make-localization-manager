@@ -1,7 +1,6 @@
 import { distributedKVStore } from '@kit.ArkData';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-
 /**
  * Thin wrapper around callback-style ArkData Distributed KV APIs using Promises.
  * Handles: createKVManager, getKVStore, put/get/delete, close/delete store.
@@ -56,8 +55,8 @@ export class KVStoreService {
             resolve();
           });
       } catch (e) {
-        reject(e);
-      }
+      reject(e);
+    }
     });
   }
 
@@ -182,7 +181,7 @@ export class KVStoreService {
         utf8ByteLength(value);
     } else if (typeof value === 'number' || typeof value === 'boolean') {
       valueBytes = 8;
-    } // rough
+    }
     if (valueBytes > 4 * 1024 * 1024) {
       throw new Error(`Value exceeds 4MB: ${valueBytes} bytes`);
     }
@@ -198,7 +197,7 @@ export function utf8ByteLength(str: string): number {
     } else if (codePoint <= 0x7FF) {
       bytes += 2;
     } else if (codePoint >= 0xD800 &&
-      codePoint <= 0xDBFF) { // surrogate pair
+      codePoint <= 0xDBFF) {
       i++;
       bytes += 4;
     } else {

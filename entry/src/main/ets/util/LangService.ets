@@ -1,17 +1,17 @@
-import { WordModel } from "../model/WordModel";
-import { EN, TR } from "./Constants";
+import { WordModel } from '../model/WordModel';
+import { EN, TR } from './Constants';
 
 export class LangService {
-  private lang: string = "en";
+  private lang: string = 'en';
   private words: Map<string, string> = new Map();
 
-  constructor(defaultLang: string = "en") {
+  constructor(defaultLang: string = 'en') {
     this.setLang(defaultLang);
   }
 
   setLang(lang: string) {
     this.lang = lang;
-    let list: WordModel[] = lang === "tr" ? TR : EN;
+    let list: WordModel[] = lang === 'tr' ? TR : EN;
     this.words.clear();
     list.forEach(w => this.words.set(w.key, w.value));
   }
@@ -25,4 +25,4 @@ export class LangService {
   }
 }
 
-export const langService: LangService = new LangService("en");
+export const langService: LangService = new LangService('en');
