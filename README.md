@@ -2,19 +2,24 @@
 
 # How To Make Localization Manager
 
-**Quick Localization Manager** is a HarmonyOS wearable app that demonstrates **multi-language support**, **KV store operations**, and **dynamic UI updates**. It provides a lightweight interface for storing, retrieving, and deleting key value pairs while allowing users to switch app language on the fly. This project is designed as an educational demo for developers exploring **data persistence** and **localization
+**Quick Localization Manager** is a HarmonyOS wearable app that demonstrates **multi-language support**, **KV store
+operations**, and **dynamic UI updates**. It provides a lightweight interface for storing, retrieving, and deleting key
+value pairs while allowing users to switch app language on the fly. This project is designed as an educational demo for
+developers exploring **data persistence** and **localization
 management** on HarmonyOS wearable devices.
 
 # Preview
 
+# Preview
+
 <div>
-  <img src="./screenshots/1.png" width="24%"/>
-  <img src="./screenshots/2.png" width="24%"/>
-  <img src="./screenshots/3.png" width="24%"/>
-  <img src="./screenshots/4.png" width="24%"/>
+<img src="./screenshots/1.png" width="24%"/>
+<img src="./screenshots/2.png" width="24%"/>
+<img src="./screenshots/3.png" width="24%"/>
+<img src="./screenshots/4.png" width="24%"/>
 </div>
 
-# Use Case Scenarios
+# Use Cases
 
 - **Multi-language Support**: Supports **English, Turkish, German, French, and Spanish**, switchable at runtime with
   persistent storage of selected language.

@@ -1,6 +1,6 @@
 {
   "app": {
-    "bundleName": "com.hmosdemos.quicklocalizationmanager",
+    "bundleName": "com.hmosdemos.wearable.how_to_make_localization_manager",
     "vendor": "hmosdemos",
     "versionCode": 1000000,
     "versionName": "1.0.0",

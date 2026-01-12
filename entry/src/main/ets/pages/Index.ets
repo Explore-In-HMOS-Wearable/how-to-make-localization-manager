@@ -7,7 +7,7 @@ import Logger from '../util/Logger';
 @Component
 struct KvStoreDemo {
   // State variables
-  @State storeId: string = 'Store'; // The KV store identifier
+  private storeId: string = 'Store';
   @State keyInput: string = '';
   @State valueInput: string = '';
   @State lastResult: string = '';
@@ -94,8 +94,13 @@ struct KvStoreDemo {
           .fontColor(Color.Black)
 
         // Store status display
-        Text(`${this.words.get('storeStatus')}: ${this.storeId} — ${this.storeOpen ? this.words.get('storeOpen') :
-        this.words.get('storeClosed')}`)
+        Text(
+          `${this.words.get('storeStatus')}: ${this.storeId} — ${
+          this.storeOpen
+            ? this.words.get('storeOpen')
+            : this.words.get('storeClosed')
+          }`
+        )
           .fontSize($r('app.float.page_text_font_size')).margin({ bottom: 10 })
           .fontColor(Color.Black)
 
@@ -270,7 +275,7 @@ struct KvStoreDemo {
                   throw new Error(`Key too large: ${keyBytes} bytes`);
                 }
                 await kvStoreService.put(this.keyInput, this.valueInput);
-                this.lastResult = `PUT ok key='${this.keyInput}'`;
+                this.lastResult = `PUT ok key=${this.keyInput}`;
                 Logger.info('PUT successful for key:', this.keyInput);
               } catch (e) {
                 this.lastResult = `PUT failed: ${JSON.stringify(e)}`;

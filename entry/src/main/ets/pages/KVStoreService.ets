@@ -40,7 +40,7 @@ export class KVStoreService {
       backup: true,
       autoSync: false,
       kvStoreType: distributedKVStore.KVStoreType.SINGLE_VERSION,
-      securityLevel: distributedKVStore.SecurityLevel.S3,
+      securityLevel: distributedKVStore.SecurityLevel.S3
     };
     await new Promise<void>((resolve, reject) => {
       try {
